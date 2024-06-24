@@ -37,21 +37,23 @@ const tagsList = [
         link: '#',
         text: 'codecanyon',
     },
-]
+];
 
 const Tags = () => {
     return (
-        <div className="widget widget-tags">
-            <div className="widget-header">
+        <div className="widget widget-tags container my-4">
+            <div className="widget-header mb-3">
                 <h5 className="title">{title}</h5>
             </div>
-            <ul className="widget-wrapper">
+            <ul className="widget-wrapper list-inline">
                 {tagsList.map((val, i) => (
-                    <li key={i}><a href={val.link}>{val.text}</a></li>
+                    <li key={i} className="list-inline-item m-1">
+                        <a href={val.link} className="btn btn-custom btn-sm">{val.text}</a>
+                    </li>
                 ))}
             </ul>
         </div>
     );
-}
- 
+};
+
 export default Tags;

@@ -1,35 +1,35 @@
-import React, { useState } from "react";
-import Rating from "../components/Rating";
+import React, { useState } from 'react';
+import Rating from '../components/Rating';
 
-const reviwtitle = "Add a Review";
-let ReviewList = [
+const reviewTitle = "Add a Review";
+let reviewList = [
   {
     imgUrl: "/src/assets/images/instructor/01.jpg",
-    imgAlt: "Client thumb",
+    imgAlt: "Client thumbnail",
     name: "Ganelon Boileau",
-    date: "Posted on Jun 10, 2022 at 6:57 am",
-    desc: "Enthusiast build innovativ initiatives before lonterm high-impact awesome theme seo psd porta monetize covalent leadership after without resource.",
+    date: "Posted on Jun 20, 2024 at 2:15 pm",
+    desc: "I absolutely love this product! It has exceeded my expectations in every way. The quality is top-notch and the customer service was excellent.",
   },
   {
     imgUrl: "/src/assets/images/instructor/02.jpg",
-    imgAlt: "Client thumb",
+    imgAlt: "Client thumbnail",
     name: "Morgana Cailot",
-    date: "Posted on Jun 10, 2022 at 6:57 am",
-    desc: "Enthusiast build innovativ initiatives before lonterm high-impact awesome theme seo psd porta monetize covalent leadership after without resource.",
+    date: "Posted on Jun 19, 2024 at 9:30 am",
+    desc: "A fantastic experience from start to finish. The product arrived on time and was exactly as described. Highly recommended!",
   },
   {
     imgUrl: "/src/assets/images/instructor/03.jpg",
-    imgAlt: "Client thumb",
+    imgAlt: "Client thumbnail",
     name: "Telford Bois",
-    date: "Posted on Jun 10, 2022 at 6:57 am",
-    desc: "Enthusiast build innovativ initiatives before lonterm high-impact awesome theme seo psd porta monetize covalent leadership after without resource.",
+    date: "Posted on Jun 18, 2024 at 1:45 pm",
+    desc: "The quality of the product is outstanding. I've been using it for a few months now and it still works perfectly. Great value for money.",
   },
   {
     imgUrl: "/src/assets/images/instructor/04.jpg",
-    imgAlt: "Client thumb",
+    imgAlt: "Client thumbnail",
     name: "Cher Daviau",
-    date: "Posted on Jun 10, 2022 at 6:57 am",
-    desc: "Enthusiast build innovativ initiatives before lonterm high-impact awesome theme seo psd porta monetize covalent leadership after without resource.",
+    date: "Posted on Jun 17, 2024 at 11:00 am",
+    desc: "This product has made a significant difference in my daily routine. It's easy to use and very efficient. I would definitely buy from this store again.",
   },
 ];
 
@@ -37,31 +37,22 @@ const Review = () => {
   const [reviewShow, setReviewShow] = useState(true);
   return (
     <>
-      {" "}
-      <ul
-        className={`review-nav lab-ul ${
-          reviewShow ? "RevActive" : "DescActive"
-        }`}
-      >
+      <ul className={`review-nav lab-ul ${reviewShow ? "RevActive" : "DescActive"}`}>
         <li onClick={() => setReviewShow(!reviewShow)} className="desc">
           Description
         </li>
         <li onClick={() => setReviewShow(!reviewShow)} className="rev">
-          Reviews 4
+          Reviews ({reviewList.length})
         </li>
       </ul>
-      
-      <div
-        className={`review-content ${
-          reviewShow ? "review-content-show" : "description-show"
-        }`}
-      >
+
+      <div className={`review-content ${reviewShow ? "review-content-show" : "description-show"}`}>
         <div className="review-showing">
           <ul className="content lab-ul">
-            {ReviewList.map((review, i) => (
+            {reviewList.map((review, i) => (
               <li key={i}>
                 <div className="post-thumb">
-                  <img src={`${review.imgUrl}`} alt={`${review.imgAlt}`} />
+                  <img src={review.imgUrl} alt={review.imgAlt} />
                 </div>
                 <div className="post-content">
                   <div className="entry-meta">
@@ -81,27 +72,26 @@ const Review = () => {
           <div className="client-review">
             <div className="review-form">
               <div className="review-title">
-                <h5>{reviwtitle}</h5>
+                <h5>{reviewTitle}</h5>
               </div>
               <form action="action" className="row">
                 <div className="col-md-4 col-12">
                   <input type="text" name="name" placeholder="Full Name *" />
                 </div>
                 <div className="col-md-4 col-12">
-                  <input type="text" name="email" placeholder="Your Email *" />
+                  <input type="email" name="email" placeholder="Your Email *" />
                 </div>
                 <div className="col-md-4 col-12">
                   <div className="rating">
-                    <span className="rating-title">Your Rating : </span>
+                    <span className="rating-title">Your Rating: </span>
                     <Rating />
                   </div>
                 </div>
                 <div className="col-md-12 col-12">
                   <textarea
                     rows="8"
-                    type="text"
                     name="message"
-                    placeholder="Type Here Message"
+                    placeholder="Type Your Message Here"
                   ></textarea>
                 </div>
                 <div className="col-12">
@@ -115,13 +105,7 @@ const Review = () => {
         </div>
         <div className="description">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Welcome to our store! Here, you'll find a wide range of high-quality products designed to meet your needs and preferences. Our commitment to excellence is reflected in the meticulous attention to detail and craftsmanship that goes into each product.
           </p>
           <div className="post-item">
             <div className="post-thumb">
@@ -129,27 +113,18 @@ const Review = () => {
             </div>
             <div className="post-content">
               <ul className="lab-ul">
-                <li>Donec non est at libero vulputate rutrum.</li>
-                <li>Morbi ornare lectus quis justo gravida semper.</li>
-                <li>Pellentesque aliquet, sem eget laoreet ultrices.</li>
-                <li>
-                  Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id
-                  nulla.
-                </li>
-                <li>Donec a neque libero.</li>
-                <li>Pellentesque aliquet, sem eget laoreet ultrices.</li>
-                <li>Morbi ornare lectus quis justo gravida semper..</li>
+                <li>Our products are made from the finest materials.</li>
+                <li>We ensure durability and longevity with each item.</li>
+                <li>Customer satisfaction is our top priority.</li>
+                <li>Explore our extensive collection today.</li>
+                <li>Enjoy unbeatable prices and great deals.</li>
+                <li>Experience the best in quality and service.</li>
+                <li>Shop with confidence knowing we stand behind our products.</li>
               </ul>
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Thank you for choosing our store. We are dedicated to providing you with exceptional products and unmatched customer service. If you have any questions or need assistance, please don't hesitate to contact us. Happy shopping!
           </p>
         </div>
       </div>

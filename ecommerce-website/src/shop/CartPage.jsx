@@ -31,7 +31,6 @@ const CartPage = () => {
     if (item.quantity > 1) {
       item.quantity -= 1;
       setCartItems([...cartItems]);
-
       // Update local storage with the new cart items
       localStorage.setItem("cart", JSON.stringify(cartItems));
     }
@@ -91,7 +90,7 @@ const CartPage = () => {
                           <Link to="/shop-single">{item.name}</Link>
                         </div>
                       </td>
-                      <td className="cat-price">${item.price}</td>
+                      <td className="cat-price">${item.price.toFixed(2)}</td>
                       <td className="cat-quantity">
                         <div className="cart-plus-minus">
                           <div
@@ -105,6 +104,7 @@ const CartPage = () => {
                             type="text"
                             name="qtybutton"
                             value={item.quantity}
+                            readOnly
                           />
                           <div
                             className="inc qtybutton"
@@ -115,11 +115,11 @@ const CartPage = () => {
                         </div>
                       </td>
                       <td className="cat-toprice">
-                        ${calculateTotalPrice(item)}
+                        ${calculateTotalPrice(item).toFixed(2)}
                       </td>
                       <td className="cat-edit">
                         <a href="#" onClick={() => handleRemoveItem(item)}>
-                          <img src={delImgUrl} alt="" />
+                          <img src={delImgUrl} alt="delete icon" />
                         </a>
                       </td>
                     </tr>
@@ -143,7 +143,6 @@ const CartPage = () => {
                 </form>
                 <form className="cart-checkout" action="/">
                   <input type="submit" value="Update Cart" />
-                  {/* <Link to="/check-out"><input type="submit" value="Proceed to Checkout" /></Link> */}
                   <div>
                     <CheckoutPage />
                   </div>
@@ -153,17 +152,17 @@ const CartPage = () => {
               {/* shopping box */}
               <div className="shiping-box">
                 <div className="row">
-                  {/* shipping  */}
+                  {/* shipping */}
                   <div className="col-md-6 col-12">
                     <div className="calculate-shiping">
                       <h3>Calculate Shipping</h3>
                       <div className="outline-select">
                         <select>
-                          <option value="volvo">United Kingdom (UK)</option>
-                          <option value="saab">Bangladesh</option>
-                          <option value="saab">Pakisthan</option>
-                          <option value="saab">India</option>
-                          <option value="saab">Nepal</option>
+                          <option value="usa">United States (USA)</option>
+                          <option value="uk">United Kingdom (UK)</option>
+                          <option value="de">Germany</option>
+                          <option value="fr">France</option>
+                          <option value="es">Spain</option>
                         </select>
                         <span className="select-icon">
                           <i className="icofont-rounded-down"></i>
@@ -171,11 +170,14 @@ const CartPage = () => {
                       </div>
                       <div className="outline-select shipping-select">
                         <select>
-                          <option value="volvo">State/Country</option>
-                          <option value="saab">Dhaka</option>
-                          <option value="saab">Benkok</option>
-                          <option value="saab">Kolkata</option>
-                          <option value="saab">Kapasia</option>
+                          <option value="volvo">State/Region</option>
+                          <option value="ca">California</option>
+                          <option value="ny">New York</option>
+                          <option value="tx">Texas</option>
+                          <option value="london">London</option>
+                          <option value="berlin">Berlin</option>
+                          <option value="paris">Paris</option>
+                          <option value="madrid">Madrid</option>
                         </select>
                         <span className="select-icon">
                           <i className="icofont-rounded-down"></i>
@@ -183,7 +185,7 @@ const CartPage = () => {
                       </div>
                       <input
                         type="text"
-                        name="coupon"
+                        name="postcode"
                         placeholder="Postcode/ZIP"
                         className="cart-page-input-text"
                       />
@@ -198,19 +200,15 @@ const CartPage = () => {
                       <ul className="lab-ul">
                         <li>
                           <span className="pull-left">Cart Subtotal</span>
-                          <p className="pull-right">$ {cartSubtotal}</p>
+                          <p className="pull-right">${cartSubtotal.toFixed(2)}</p>
                         </li>
                         <li>
-                          <span className="pull-left">
-                            Shipping and Handling
-                          </span>
+                          <span className="pull-left">Shipping and Handling</span>
                           <p className="pull-right">Free Shipping</p>
                         </li>
                         <li>
                           <span className="pull-left">Order Total</span>
-                          <p className="pull-right">
-                            $ {orderTotal.toFixed(2)}
-                          </p>
+                          <p className="pull-right">${orderTotal.toFixed(2)}</p>
                         </li>
                       </ul>
                     </div>

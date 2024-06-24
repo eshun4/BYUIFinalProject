@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Data from "../products.json";
+import Data from '../products.json';
 
-const title = "All Categories";
+const title = 'All Categories';
 
 const ShopCategory = ({ filterItem, setItem, menuItems, setProducts, selectedCategory }) => {
   return (
@@ -15,13 +15,15 @@ const ShopCategory = ({ filterItem, setItem, menuItems, setProducts, selectedCat
           All
         </button>
 
-        {menuItems && menuItems.map((Val, id) => {
-          return (
-            <button className={`m-2 ${selectedCategory === Val ? 'bg-warning' : ''}`} onClick={() => filterItem(Val)} key={id}>
-              {Val}
-            </button>
-          );
-        })}
+        {menuItems.map((val, id) => (
+          <button
+            className={`m-2 ${selectedCategory === val ? 'bg-warning' : ''}`}
+            onClick={() => filterItem(val)}
+            key={id}
+          >
+            {val}
+          </button>
+        ))}
       </div>
     </>
   );

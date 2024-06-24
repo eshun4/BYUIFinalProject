@@ -1,36 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
-// import PopularPost from "../shop/PopularPost";
 import Tags from "./Tags";
-// import Rating from "../components/Rating";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
 import { Autoplay } from "swiper/modules";
 import Review from "../shop/Review";
 import MostPopularPost from "../shop/MostPopularPost";
 import ProductDisplay from "./ProductDisplay";
-const reviewtitle = "Add a Review";
 
 const SingleProduct = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
+
   useEffect(() => {
     fetch("/src/products.json")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
 
-
   const result = product.filter((p) => p.id === id);
+
   return (
-    
     <div>
-      <PageHeader title={"OUR SHOP SINGLE"} curPage={"Shop / Single Product"} />
+      <PageHeader title={"Discover Our Exclusive Product"} curPage={"Shop / Product Details"} />
       <div className="shop-single padding-tb aside-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -44,7 +37,7 @@ const SingleProduct = () => {
                           <Swiper
                             spaceBetween={30}
                             slidesPerView={1}
-                            loop={"true"}
+                            loop={true}
                             autoplay={{
                               delay: 2000,
                               disableOnInteraction: false,
@@ -58,7 +51,7 @@ const SingleProduct = () => {
                             {result.map((item, i) => (
                               <SwiperSlide key={i}>
                                 <div className="single-thumb">
-                                  <img src={item.img} alt="" />
+                                  <img src={item.img} alt={item.name} className="img-fluid" />
                                 </div>
                               </SwiperSlide>
                             ))}
@@ -74,23 +67,20 @@ const SingleProduct = () => {
                     </div>
                     <div className="col-md-6 col-12">
                       <div className="post-content">
-                        <div>
-                          {
-                            result.map(item => <ProductDisplay item={item} key={item.id}/>)
-                          }
-                        </div>
+                        {result.map((item) => (
+                          <ProductDisplay item={item} key={item.id} />
+                        ))}
                       </div>
                     </div>
                   </div>
                 </div>
-                
-                <div className="review">
+                <div className="review mt-4">
                   <Review />
                 </div>
               </article>
             </div>
             <div className="col-lg-4 col-md-7 col-12">
-              <aside className="ps-lg-4">
+              <aside className="ps-lg-4 mt-4 mt-lg-0">
                 <MostPopularPost />
                 <Tags />
               </aside>

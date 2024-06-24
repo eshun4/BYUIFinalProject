@@ -23,6 +23,10 @@ import Home from './home/Home';
 import Blog from './blog/Blog';
 import SingleProduct from './shop/SingleProduct';
 import CartPage from './shop/CartPage';
+import About from '../src/about/About';
+import SingleBlog from './blog/SingleBlog';
+import Contact from './contactPage/Contact';
+
 
 
 
@@ -43,6 +47,10 @@ const router = createBrowserRouter([
         element: <Blog/>
       },
       {
+        path: "/blog/:id",
+        element: <SingleBlog/>
+      },
+      {
         path: "/shop",
         element: <Shop/>
       },
@@ -51,8 +59,16 @@ const router = createBrowserRouter([
         element: <SingleProduct/>
       },
       {
-        path: "cart-page",
+        path: "/cart-page",
         element: <CartPage/>
+      },
+      {
+        path:"/about",
+        element: <About/>
+      },
+      {
+        path:"/contact",
+        element: <Contact/>
       }
     ]
   },

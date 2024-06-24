@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from "./App";
+import Shop from './shop/Shop';
 
 import {
   createBrowserRouter,
@@ -20,6 +21,12 @@ import '././assets/css/animate.css';
 import '././assets/css/style.min.css';
 import Home from './home/Home';
 import Blog from './blog/Blog';
+import SingleProduct from './shop/SingleProduct';
+import CartPage from './shop/CartPage';
+
+
+
+
 
 
 const router = createBrowserRouter([
@@ -28,19 +35,29 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {
-        path: '/',
+       path: '/',
        element: <Home/>
       },
       {
         path: "/blog",
         element: <Blog/>
+      },
+      {
+        path: "/shop",
+        element: <Shop/>
+      },
+      {
+        path: "shop/:id",
+        element: <SingleProduct/>
+      },
+      {
+        path: "cart-page",
+        element: <CartPage/>
       }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <RouterProvider router={router} />
 )

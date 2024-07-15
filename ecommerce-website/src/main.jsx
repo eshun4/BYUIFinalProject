@@ -26,6 +26,10 @@ import CartPage from './shop/CartPage';
 import About from '../src/about/About';
 import SingleBlog from './blog/SingleBlog';
 import Contact from './contactPage/Contact';
+import AuthProvider from "../src/contexts/AuthProvider";
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
 
 
 
@@ -60,7 +64,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart-page",
-        element: <CartPage/>
+        element: <PrivateRoute> <CartPage/></PrivateRoute>
       },
       {
         path:"/about",
@@ -72,8 +76,19 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "login",
+    element: <Login/>
+  },
+  {
+    path: "sign-up",
+    element: <SignUp/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>
+  
 )

@@ -4,19 +4,20 @@ import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 
 const ProductCards = ({ products, GridList }) => {
-  // console.log(products.map(val => console.log(val.id)))
+  if (!products || products.length === 0) {
+    return <div>No products available.</div>; // or any fallback UI
+  }
+
   return (
     <div
-      className={`shop-product-wrap row justify-content-center ${
-        GridList ? "grid" : "list"
-      }`}
+      className={`shop-product-wrap row justify-content-center ${GridList ? "grid" : "list"}`}
     >
       {products.map((product, i) => (
         <div className="col-lg-4 col-md-6 col-12" key={i}>
           <div className="product-item">
             <div className="product-thumb">
               <div className="pro-thumb">
-                <img src={`${product.img}`} alt={`${product.img}`} />
+                <img src={`${product.img}`} alt={`${product.name}`} />
               </div>
               <div className="product-action-link">
                 <Link to={`/shop/${product.id}`}>
@@ -40,36 +41,11 @@ const ProductCards = ({ products, GridList }) => {
               <h6>${product.price}</h6>
             </div>
           </div>
-          <div className="product-list-item">
-            <div className="product-thumb">
-              <div className="pro-thumb">
-                <img src={`${product.img}`} alt={`${product.imgAlt}`} />
-              </div>
-              <div className="product-action-link">
-                <a href="#">
-                  <i className="icofont-eye"></i>
-                </a>
-                <a href="#">
-                  <i className="icofont-heart"></i>
-                </a>
-                <a href="#">
-                  <i className="icofont-cart-alt"></i>
-                </a>
-              </div>
-            </div>
-            <div className="product-content">
-            <Link to={`/shop/${product.id}`}>{product.name}</Link>
-              <p className="productRating">
-                <Rating />
-              </p>
-              <h6>${product.price}</h6>
-              <p>{product.seller}</p>
-            </div>
-          </div>
         </div>
       ))}
     </div>
   );
 };
+
 
 export default ProductCards;

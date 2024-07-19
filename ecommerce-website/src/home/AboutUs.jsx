@@ -51,12 +51,12 @@ const AboutUs = () => {
                         <span className="subtitle">{subTitle}</span>
                         <h2 className="title">{title}</h2>
                         <p>{desc}</p>
-                        <Link to="/signup" className="lab-btn"><span>{btnText}</span></Link>
+                        <Link to="/" className="lab-btn"><span>{btnText}</span></Link>
                     </div>
                 </div>
                 <div className="col">
                     <div className="instructor-thumb">
-                        <img src="src/assets/images/instructor/01.png" alt="" />
+                        <img src="/images/instructor/01.png" alt="" />
                     </div>
                 </div>
             </div>

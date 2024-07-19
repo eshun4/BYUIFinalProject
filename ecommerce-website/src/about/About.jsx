@@ -10,19 +10,19 @@ const experience = "Years of Experience";
 
 const aboutList = [
     {
-        imgUrl: '/src/assets/images/about/icon/01.jpg',
+        imgUrl: '/images/about/icon/01.jpg',
         imgAlt: 'Skilled Instructors Icon',
         title: 'Skilled Instructors',
         desc: 'Our expert instructors bring years of industry experience, ensuring comprehensive learning outcomes.',
     },
     {
-        imgUrl: '/src/assets/images/about/icon/02.jpg',
+        imgUrl: '/images/about/icon/02.jpg',
         imgAlt: 'Certificate Icon',
         title: 'Certification Programs',
         desc: 'Earn accredited certificates that validate your skills and enhance your professional profile.',
     },
     {
-        imgUrl: '/src/assets/images/about/icon/03.jpg',
+        imgUrl: '/images/about/icon/03.jpg',
         imgAlt: 'Online Classes Icon',
         title: 'Interactive Online Classes',
         desc: 'Engage in dynamic virtual classrooms designed to deliver personalized learning experiences.',
@@ -39,10 +39,10 @@ const About = () => {
                         <div className="col">
                             <div className="about-left">
                                 <div className="about-thumb">
-                                    <img src="/src/assets/images/about/01.jpg" alt="About Us Image" />
+                                    <img src="/images/about/01.jpg" alt="About Us Image" />
                                 </div>
                                 <div className="abs-thumb">
-                                    <img src="/src/assets/images/about/02.jpg" alt="About Us Image" />
+                                    <img src="/images/about/02.jpg" alt="About Us Image" />
                                 </div>
                                 <div className="about-left-content">
                                     <h3>{year}</h3>

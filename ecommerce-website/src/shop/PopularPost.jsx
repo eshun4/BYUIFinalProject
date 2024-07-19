@@ -5,28 +5,28 @@ const title = "Most Popular Posts";
 const postList = [
   {
     id: 1,
-    imgUrl: "/src/assets/images/blog/10.jpg",
+    imgUrl: "/images/blog/10.jpg",
     imgAlt: "blog image 1",
     title: "Campaign for Resource Allocation",
     date: "Jun 24, 2024",
   },
   {
     id: 2,
-    imgUrl: "/src/assets/images/blog/11.jpg",
+    imgUrl: "/images/blog/11.jpg",
     imgAlt: "blog image 2",
     title: "Community Outreach Initiatives",
     date: "Jun 23, 2024",
   },
   {
     id: 3,
-    imgUrl: "/src/assets/images/blog/12.jpg",
+    imgUrl: "/images/blog/12.jpg",
     imgAlt: "blog image 3",
     title: "Educational Program Success",
     date: "Jun 22, 2024",
   },
   {
     id: 4,
-    imgUrl: "/src/assets/images/blog/09.jpg",
+    imgUrl: "/images/blog/09.jpg",
     imgAlt: "blog image 4",
     title: "Healthcare Improvements in 2024",
     date: "Jun 21, 2024",

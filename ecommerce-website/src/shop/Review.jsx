@@ -4,28 +4,28 @@ import Rating from '../components/Rating';
 const reviewTitle = "Add a Review";
 let reviewList = [
   {
-    imgUrl: "/src/assets/images/instructor/01.jpg",
+    imgUrl: "/images/instructor/01.jpg",
     imgAlt: "Client thumbnail",
     name: "Ganelon Boileau",
     date: "Posted on Jun 20, 2024 at 2:15 pm",
     desc: "I absolutely love this product! It has exceeded my expectations in every way. The quality is top-notch and the customer service was excellent.",
   },
   {
-    imgUrl: "/src/assets/images/instructor/02.jpg",
+    imgUrl: "/images/instructor/02.jpg",
     imgAlt: "Client thumbnail",
     name: "Morgana Cailot",
     date: "Posted on Jun 19, 2024 at 9:30 am",
     desc: "A fantastic experience from start to finish. The product arrived on time and was exactly as described. Highly recommended!",
   },
   {
-    imgUrl: "/src/assets/images/instructor/03.jpg",
+    imgUrl: "/images/instructor/03.jpg",
     imgAlt: "Client thumbnail",
     name: "Telford Bois",
     date: "Posted on Jun 18, 2024 at 1:45 pm",
     desc: "The quality of the product is outstanding. I've been using it for a few months now and it still works perfectly. Great value for money.",
   },
   {
-    imgUrl: "/src/assets/images/instructor/04.jpg",
+    imgUrl: "/images/instructor/04.jpg",
     imgAlt: "Client thumbnail",
     name: "Cher Daviau",
     date: "Posted on Jun 17, 2024 at 11:00 am",

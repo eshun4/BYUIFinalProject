@@ -117,7 +117,7 @@ const SingleBlog = () => {
                                 </p>
 
                                 <img
-                                  src="/src/assets/images/blog/single/01.jpg"
+                                  src="/images/blog/single/01.jpg"
                                   alt="Blog Post"
                                 />
 
@@ -132,11 +132,11 @@ const SingleBlog = () => {
 
                                 <div className="video-thumb">
                                   <img
-                                    src="/src/assets/images/blog/single/02.jpg"
+                                    src="/images/blog/single/02.jpg"
                                     alt="Video"
                                   />
                                   <a
-                                    href="https://youtu.be/2qWo6W5Wn8Q"
+                                    href="https://youtube.com"
                                     className="video-button popup"
                                     target="_blank"
                                   >

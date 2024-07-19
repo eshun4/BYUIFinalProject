@@ -11,25 +11,25 @@ const btnText = "Send Message";
 
 const contactList = [
   {
-    imgUrl: "/src/assets/images/icon/01.png",
+    imgUrl: "/images/icon/01.png",
     imgAlt: "contact icon",
     title: "Office Address",
     desc: "Los Angeles, USA.",
   },
   {
-    imgUrl: "/src/assets/images/icon/02.png",
+    imgUrl: "/images/icon/02.png",
     imgAlt: "contact icon",
     title: "Phone number",
     desc: "+1 234 567 890",
   },
   {
-    imgUrl: "/src/assets/images/icon/03.png",
+    imgUrl: "/images/icon/03.png",
     imgAlt: "contact icon",
     title: "Send email",
     desc: "info@shopres.com",
   },
   {
-    imgUrl: "/src/assets/images/icon/04.png",
+    imgUrl: "/images/icon/04.png",
     imgAlt: "contact icon",
     title: "Our website",
     desc: "www.shopres.com",

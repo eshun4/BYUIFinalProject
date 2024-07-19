@@ -20,8 +20,8 @@ const CategoryShowCase = () => {
 
     return (
         <div className="course-section style-3 padding-tb">
-            <div className="course-shape one"><img src="/src/assets/images/shape-img/icon/01.png" alt="education" /></div>
-            <div className="course-shape two"><img src="/src/assets/images/shape-img/icon/02.png" alt="education" /></div>
+            <div className="course-shape one"><img src="/images/shape-img/icon/01.png" alt="education" /></div>
+            <div className="course-shape two"><img src="/images/shape-img/icon/02.png" alt="education" /></div>
             <div className="container">
                 {/* section header */}
                 <div className="section-header">

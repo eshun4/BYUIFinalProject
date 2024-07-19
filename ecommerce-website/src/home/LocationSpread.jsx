@@ -6,37 +6,37 @@ const desc = "Shop effortlessly on any device with our app. Enjoy seamless shopp
 
 const clientsList = [
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: '/images/clients/avater.jpg',
         imgAlt: 'Customer avatar',
         text: 'Join Us Today',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: '/images/clients/avater.jpg',
         imgAlt: 'Customer avatar',
         text: 'Join Us Today',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: '/images/clients/avater.jpg',
         imgAlt: 'Customer avatar',
         text: 'Join Us Today',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: '/images/clients/avater.jpg',
         imgAlt: 'Customer avatar',
         text: 'Join Us Today',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: '/images/clients/avater.jpg',
         imgAlt: 'Customer avatar',
         text: 'Join Us Today',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: '/images/clients/avater.jpg',
         imgAlt: 'Customer avatar',
         text: 'Join Us Today',
     },
     {
-        imgUrl: '/src/assets/images/clients/avater.jpg',
+        imgUrl: '/images/clients/avater.jpg',
         imgAlt: 'Customer avatar',
         text: 'Join Us Today',
     },
